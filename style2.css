@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Az oldal teljes magasságát lefedi */
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.success-message {
+    font-size: 2.5em; /* Nagy betűméret */
+    color: #5cb85c; /* Zöld szín */
+    margin-bottom: 20px;
+}
+
+.success-image {
+    max-width: 100%; /* Kép méretének optimalizálása */
+    height: auto; /* Arányok megőrzése */
+}

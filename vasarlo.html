@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rendelj luxus cipőket jó áron. Gyors házhozszállítás és kiváló minőség!">
+    <meta name="keywords" content="luxus,divat,cipők, rendelés, online rendelés, házhozszállítás, kapcsolat, menü">
+    <meta name="author" content="Luxus cipő Weboldal Készítő">
+    <title>Luxus illatbolt - Online Rendelés</title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ugrás a kezdőlapra.</a></li>
+               
+            </ul>
+            
+            <div class="container">
+                <h1>Rendelési Űrlap</h1>
+                
+                <form id="order-form" action="success.html" method="post">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" name="name" required placeholder="Adja meg a nevét">
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="példa@domain.com">
+        
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]*" required placeholder="1234567890">
+                    
+                    <label for="payment">Fizetési mód:</label>
+                    <select id="payment" name="payment" required>
+        
+                    
+                        <option value="card">Bankkártya</option>
+                        <option value="cash">Paypal</option>
+                        <option value="after">Utánvétel</option>
+        
+        
+                    </select><br><br>
+        
+         
+                    <label for="notes">Megjegyzés:</label>
+                    <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+                </ul>
+        
+                    <button type="submit" id="submit-button" disabled>Leadás</button>
+                </form>
+            </div>
+        
+            <script>
+                // Referenciák az űrlap mezőkhöz és a gombhoz
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const phoneInput = document.getElementById('phone');
+                const submitButton = document.getElementById('submit-button');
+        
+                // Funkció az űrlap mezők ellenőrzésére
+                function validateForm() {
+                    // Ellenőrizzük, hogy minden mező ki van-e töltve
+                    if (nameInput.value.trim() !== '' && emailInput.checkValidity() && phoneInput.checkValidity()) {
+                        submitButton.disabled = false; // Engedélyezzük a gombot
+                    } else {
+                        submitButton.disabled = true; // Letiltjuk a gombot
+                    }
+                }
+        
+                // Események hozzáadása az input mezőkhöz
+                nameInput.addEventListener('input', validateForm);
+                emailInput.addEventListener('input', validateForm);
+                phoneInput.addEventListener('input', validateForm);
+            </script>
+
+</body>
+</html>
